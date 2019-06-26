@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <link href="./files/bootstrap-editable.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        input.error {
+            border: solid red;
+        }
+    </style>
+    <script src="./files/jquery-2.0.3.min.js"></script>
+    <script src="./files/bootstrap.min.js"></script>
+    <script src="./files/bootstrap-editable.min.js"></script>
+</head>
+<body>
+<div class="containerr">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a class="nav-item nav-link active" data-tab="bottles">Бутылки</a></li>
+                    <li><a class="nav-item nav-link" data-tab="metal">Метал</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron tab-content" id="nav-tabContent">
+        <div class="tab-pane active bottles container">
+            <table id="bottles" class="col-sm-10 offset-sm-1 table-bordered table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Название</th>
+                    <th>Цена</th>
+                    <th>Кол-во</th>
+                    <th>Итого</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <button onclick="onReset()">Обнулить</button>
+        </div>
+    </div>
+</div>
+
+<script src="./files/data-json.js"></script>
+<script src="./files/code.js"></script>
+</body>
+</html>
